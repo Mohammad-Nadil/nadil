@@ -40,32 +40,32 @@ let [menu , setMenu ] = useState(false)
       </Container>
     </nav>
     <section id='#' className={` transition-all duration-300 ${dark?" bg-dark ":"bg-light"} `} >
-      <Container className={`flex justify-between items-center z-10 after:-z-10 pt-80 pb-52 relative after:h-full after:w-1/2 after:top-0 after:left-0 after:absolute after:transition-all after:duration-300 after:skew-x-[30deg]  ${dark ?" after:bg-secondary-dark":"after:bg-secondary-light"} `} >
+      <Container className={`flex flex-col-reverse sm:flex-row justify-between items-center z-10 after:-z-10 pt-28 md:pt-32 xl:pt-40 2xl:pt-80 pb-10 md:pb-16 xl:pb-20 2xl:pb-52 relative after:h-full after:w-1/2 after:top-0 after:left-0 after:hidden sm:after:absolute after:transition-all after:duration-300 after:skew-x-[30deg]  ${dark ?" after:bg-secondary-dark":"after:bg-secondary-light"} `} >
         <div className="left flex flex-col gap-y-7">
-          <h2 className={`font-poppins font-extrabold text-[2.75rem] leading-[4.125rem] after:w-[26rem] after:h-2 after:absolute relative after:top-full  after:left-0 after:translate-x-1/2 transition-all duration-300 after:transition-all after:duration-300  ${dark ?" after:bg-primary-dark text-primary-dark ":"text-primary-light after:bg-primary-light"}`}>Mohammad  Nadil</h2>
-          <h3 className={` font-poppins font-bold text-5xl max-w-[36rem]  ${dark ?"  text-light ":"text-dark "}`}>Front-end Developer & UI Designer</h3>
-          <p className='font-poppins font-medium text-xl text-both max-w-[35rem] ' >Front-end developer focused on creating Web and Mobile applications. I really like different projects that solve real problems.</p>
-          <div className="icon flex gap-7">
+          <h2 className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem] after:w-[26rem] after:h-2 after:absolute relative after:top-full  after:left-0 after:translate-x-1/2 transition-all duration-300 after:transition-all after:duration-300  ${dark ?" xl:after:bg-primary-dark text-primary-dark ":"text-primary-light xl:after:bg-primary-light"}`}>Mohammad  Nadil</h2>
+          <h3 className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${dark ?"  text-light ":"text-dark "}`}>Front-end Developer & UI Designer</h3>
+          <p className='font-poppins font-medium md:text-xl text-both max-w-[35rem] ' >Front-end developer focused on creating Web and Mobile applications. I really like different projects that solve real problems.</p>
+          <div className="icon flex gap-3 sm:gap-5 md:gap-7">
             <a className={`inline-block p-3 rounded-full ${dark? " bg-light":" bg-dark"} `} href="">
-            <FaFacebookSquare className={`text-4xl ${dark ? " text-dark":"  text-light"}`} />
+            <FaFacebookSquare className={` text-xl sm:text-2xl md:text-4xl ${dark ? " text-dark":"  text-light"}`} />
             </a>
             <a className={`inline-block p-3 rounded-full ${dark? " bg-light":" bg-dark"} `} href="">
-            <FaGithub className={`text-4xl ${dark ? " text-dark":"  text-light"}`} />
+            <FaGithub className={` text-xl sm:text-2xl md:text-4xl ${dark ? " text-dark":"  text-light"}`} />
             </a>
             <a className={`inline-block p-3 rounded-full ${dark? " bg-light":" bg-dark"} `} href="">
-            <FaLinkedinIn className={`text-4xl ${dark ? " text-dark":"  text-light"}`} />
+            <FaLinkedinIn className={` text-xl sm:text-2xl md:text-4xl ${dark ? " text-dark":"  text-light"}`} />
             </a>
             <a className={`inline-block p-3 rounded-full ${dark? " bg-light":" bg-dark"} `} href="">
-            <IoMdMail className={`text-4xl ${dark ? " text-dark":"  text-light"}`} />
+            <IoMdMail className={` text-xl sm:text-2xl md:text-4xl ${dark ? " text-dark":"  text-light"}`} />
             </a>
             <a className={`inline-block p-3 rounded-full ${dark? " bg-light":" bg-dark"} `} href="">
-            <FaPhoneAlt className={`text-4xl ${dark ? " text-dark":"  text-light"}`} />
+            <FaPhoneAlt className={` text-xl sm:text-2xl md:text-4xl ${dark ? " text-dark":"  text-light"}`} />
             </a>
           </div>
         </div>
         <div className="right">
           <div className="image">
-            <img className={` rounded-full ${dark?"border-2 border-primary-dark":"border-2 border-primary-light"}`} src={profile} alt="" />
+            <img className={` w-[70vw] sm:w-auto rounded-full ${dark?"border-2 border-primary-dark":"border-2 border-primary-light"}`} src={profile} alt="" />
             </div>
         </div>
       </Container>
