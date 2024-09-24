@@ -14,7 +14,7 @@ export default {
       },
     },
     fontFamily: {
-      rubik: ['"Rubik 80s Fade"', "system-ui"],
+      rubik: ['"Rubik Iso"', "system-ui"],
       poppins: ['"Poppins"', "sans-serif"],
     },
   },
