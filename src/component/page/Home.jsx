@@ -8,11 +8,10 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import profile from "/profile.png";
+import profile from "/profile.jpg";
 import Li from "../layer/Li";
 import { IoMenu } from "react-icons/io5";
 import Anc from "../layer/Anc";
-import { CgWebsite } from "react-icons/cg";
 import ServiceLi from "../layer/ServiceLi";
 import { BiServer } from "react-icons/bi";
 import { MdDesignServices, MdDevices } from "react-icons/md";

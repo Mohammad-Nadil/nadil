@@ -13,7 +13,7 @@
   z-index: -1;
 }
 .bg_img{
-  background: url(/bg_image.png) no-repeat right /cover;
+  background: url(/bg_image.jpg) no-repeat right /cover;
   position: relative;
   z-index: 10;
 }
