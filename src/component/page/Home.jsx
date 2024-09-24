@@ -17,6 +17,7 @@ import { BiServer } from "react-icons/bi";
 import { MdDesignServices, MdDevices } from "react-icons/md";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { RiLayoutMasonryLine } from "react-icons/ri";
+import About from "../About";
 
 const Home = () => {
   let [dark, setDark] = useState(false);
@@ -33,10 +34,15 @@ const Home = () => {
 
   let theme_bg = ` transition-all duration-300  ${dark ? "bg-dark":" bg-light"}`
 
-  let theme_bg_gradient = ` transition-all duration-300  ${
+  let theme_bg_gradient_after = ` transition-all duration-300  ${
     dark
       ? " after:bg-gradient-to-r from-[#363636] to-dark bg-dark"
       : " after:bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
+  }`
+  let theme_bg_gradient = ` transition-all duration-300  ${
+    dark
+      ? " bg-gradient-to-r from-[#363636] to-dark bg-dark"
+      : " bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
   }`
 
   let theme_text_bg = `${theme_bg}  ${theme_text}`
@@ -63,10 +69,12 @@ const Home = () => {
               color={theme_text}
             />
             <Li
+              href="#service"
               litext="Services"
               color={theme_text_hover}
             />
             <Li
+            href="about"
               litext="About me"
               color={theme_text_hover}
             />
@@ -183,7 +191,7 @@ const Home = () => {
               </h2>
             </div>
             <div className="list">
-              <ul className=" flex flex-col sm:flex-row sm:flex-wrap gap-y-12 w-full ">
+              <ul className=" flex flex-col sm:flex-row sm:flex-wrap gap-y-8 sm:gap-y-10 md:gap-y-12 w-full ">
                 <ServiceLi text="Web Development" 
                 icon={<FaCode className={theme_icon_primary}/>} />
                 <ServiceLi text="API Integration" 
@@ -201,6 +209,10 @@ const Home = () => {
           </div>
         </Container>
       </section>
+      <section id="about" className={theme_bg_gradient} >
+        <About head={theme_text_secondary} color={theme_text} />
+      </section>
+
     </>
   );
 };
