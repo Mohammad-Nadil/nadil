@@ -74,7 +74,7 @@ const Home = () => {
               color={theme_text_hover}
             />
             <Li
-            href="about"
+            href="#about"
               litext="About me"
               color={theme_text_hover}
             />
