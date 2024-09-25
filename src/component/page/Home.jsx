@@ -18,35 +18,52 @@ import { MdDesignServices, MdDevices } from "react-icons/md";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { RiLayoutMasonryLine } from "react-icons/ri";
 import About from "../About";
+import Contact from "../Contact";
 
 const Home = () => {
   let [dark, setDark] = useState(false);
   let [menu, setMenu] = useState(false);
 
-  let theme_text = ` transition-all duration-300  ${dark ? "text-primary-dark":" text-primary-light"}`
-  let theme_text_hover = ` transition-all duration-300  ${ dark
-    ? " hover:text-primary-dark text-light "
-    : "hover:text-primary-light text-dark"}`
-
-  let theme_text_secondary = ` ${
-                dark ? "  text-light " : "text-dark "
-              }`
-
-  let theme_bg = ` transition-all duration-300  ${dark ? "bg-dark":" bg-light"}`
-
-  let theme_bg_gradient_after = ` transition-all duration-300  ${
+  let theme_text = ` transition-all duration-300  ${
+    dark ? "text-primary-dark" : " text-primary-light"
+  }`;
+  let theme_bg_primary = ` transition-all duration-300  ${
+    dark ? "bg-primary-dark" : " bg-primary-light"
+  }`;
+  let theme_text_hover = ` transition-all duration-300  ${
     dark
-      ? " after:bg-gradient-to-r from-[#363636] to-dark bg-dark"
-      : " after:bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
-  }`
+      ? " hover:text-primary-dark text-light "
+      : "hover:text-primary-light text-dark"
+  }`;
+
+  let theme_text_secondary = ` ${dark ? "  text-light " : "text-dark "}`;
+
+  let theme_bg = ` transition-all duration-300  ${
+    dark ? "bg-dark" : " bg-light"
+  }`;
+  let contact_bg = ` transition-all duration-300  ${
+    dark ? "xl:bg-[#303030] border-light" : " border-dark xl:bg-[#DDDADA]"
+  }`;
+  let contact_inp_bg = ` transition-all duration-300  ${
+    dark ? "bg-[#343434]" : " bg-[#ffffff]"
+  }`;
+  let contact_inp = ` transition-all duration-300  ${
+    dark ? "xl:bg-[#202020] border-light text-light " : " border-dark text-dark xl:bg-[#EDEDED]"
+  }`;
+
+  // let theme_bg_gradient_after = ` transition-all duration-300  ${
+  //   dark
+  //     ? " after:bg-gradient-to-r from-[#363636] to-dark bg-dark"
+  //     : " after:bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
+  // }`;
   let theme_bg_gradient = ` transition-all duration-300  ${
     dark
       ? " bg-gradient-to-r from-[#363636] to-dark bg-dark"
       : " bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
-  }`
+  }`;
 
-  let theme_text_bg = `${theme_bg}  ${theme_text}`
-  let theme_icon_primary = ` text-4xl lg:text-5xl   ${theme_text}`
+  let theme_text_bg = `${theme_bg}  ${theme_text}`;
+  let theme_icon_primary = ` text-4xl lg:text-5xl   ${theme_text}`;
 
   return (
     <>
@@ -64,28 +81,11 @@ const Home = () => {
               menu ? "opacity-100 visible" : " opacity-0 invisible"
             }`}
           >
-            <Li
-              litext="Home"
-              color={theme_text}
-            />
-            <Li
-              href="#service"
-              litext="Services"
-              color={theme_text_hover}
-            />
-            <Li
-            href="#about"
-              litext="About me"
-              color={theme_text_hover}
-            />
-            <Li
-              litext="Projects"
-              color={theme_text_hover}
-            />
-            <Li
-              litext="Contact"
-              color={theme_text_hover}
-            />
+            <Li litext="Home" color={theme_text} />
+            <Li href="#service" litext="Services" color={theme_text_hover} />
+            <Li href="#about" litext="About me" color={theme_text_hover} />
+            <Li litext="Projects" color={theme_text_hover} />
+            <Li href="#contact" litext="Contact" color={theme_text_hover} />
           </ul>
           <div className="flex gap-x-5 items-center">
             <div
@@ -114,7 +114,7 @@ const Home = () => {
       </nav>
       <section
         id="#"
-        className={` transition-all duration-300  z-10 after:-z-10 relative after:h-full after:w-4/5 after:top-0 after:left-0  after:absolute after:transition-all after:duration-300  ${theme_bg_gradient}   `}
+        className={` transition-all duration-300  ${theme_bg_gradient}   `}
       >
         <Container
           className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-80 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden`}
@@ -141,7 +141,7 @@ const Home = () => {
             </p>
             <div className="icon flex gap-3 sm:gap-5 md:gap-7">
               <Anc
-                color= {theme_text_bg}
+                color={theme_text_bg}
                 icon={<FaFacebookSquare />}
                 href="https://www.facebook.com/profile.php?id=100090793946195"
               />
@@ -150,11 +150,7 @@ const Home = () => {
                 icon={<FaGithub />}
                 href="https://github.com/Mohammad-Nadil"
               />
-              <Anc
-                color={theme_text_bg}
-                icon={<FaLinkedinIn />}
-                href=""
-              />
+              <Anc color={theme_text_bg} icon={<FaLinkedinIn />} href="" />
               <Anc
                 color={theme_text_bg}
                 icon={<IoMdMail />}
@@ -192,27 +188,53 @@ const Home = () => {
             </div>
             <div className="list">
               <ul className=" flex flex-col sm:flex-row sm:flex-wrap gap-y-8 sm:gap-y-10 md:gap-y-12 w-full ">
-                <ServiceLi text="Web Development" 
-                icon={<FaCode className={theme_icon_primary}/>} />
-                <ServiceLi text="API Integration" 
-                icon={<BiServer className={theme_icon_primary}/>} />
-                <ServiceLi text="  UI/UX Design Implementation" 
-                icon={<MdDesignServices className={theme_icon_primary}/>} />
-                <ServiceLi text="Cross-Browser Compatibility" 
-                icon={<AiOutlineGlobal className={theme_icon_primary}/>} />
-                <ServiceLi text="Landing Page Design" 
-                icon={<RiLayoutMasonryLine className={theme_icon_primary}/>} />
-                <ServiceLi text="Responsive Web Design" 
-                icon={<MdDevices className={theme_icon_primary}/>} />
-              </ul> 
+                <ServiceLi
+                  text="Web Development"
+                  icon={<FaCode className={theme_icon_primary} />}
+                />
+                <ServiceLi
+                  text="API Integration"
+                  icon={<BiServer className={theme_icon_primary} />}
+                />
+                <ServiceLi
+                  text="  UI/UX Design Implementation"
+                  icon={<MdDesignServices className={theme_icon_primary} />}
+                />
+                <ServiceLi
+                  text="Cross-Browser Compatibility"
+                  icon={<AiOutlineGlobal className={theme_icon_primary} />}
+                />
+                <ServiceLi
+                  text="Landing Page Design"
+                  icon={<RiLayoutMasonryLine className={theme_icon_primary} />}
+                />
+                <ServiceLi
+                  text="Responsive Web Design"
+                  icon={<MdDevices className={theme_icon_primary} />}
+                />
+              </ul>
             </div>
           </div>
         </Container>
       </section>
-      <section id="about" className={theme_bg_gradient} >
+      <section id="about" className={theme_bg_gradient}>
         <About head={theme_text_secondary} color={theme_text} />
       </section>
-
+      <section
+        id="contact"
+        className={` transition-all duration-300  ${theme_bg_gradient}   `}
+      >
+        <Contact
+          inp={contact_inp}
+          contact={contact_bg}
+          inp_bg={contact_inp_bg}
+          primary={theme_bg_primary}
+          primary_text={theme_text}
+        />
+      </section>
+      <footer>
+        <p className={`  sm:py-4 max-lg:py-6 lg:py-8 xl:py-10 2xl:py-11 text-center text-both ${theme_bg}  `}>© 2024 Md Nadil All rights reserved</p>
+      </footer>
     </>
   );
 };
