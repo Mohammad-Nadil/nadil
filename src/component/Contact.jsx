@@ -35,17 +35,17 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
               </p>
             </div>
             <div className="flex flex-col link  gap-y-6 2xl:gap-y-14 ">
-              <a className={links} href="tel:+8801760152349">
+              <a className={links} target="_blank" href="tel:+8801760152349">
                 <IoCallOutline
                   className={` text-4xl !bg-transparent ${inp} `}
                 />
                 <p className={` ${primary_text} `}>+880 1760152349</p>
               </a>
-              <a className={links} href="mailto:mdnadil50@gmail.com">
+              <a className={links} target="_blank" href="mailto:mdnadil50@gmail.com">
                 <CiMail className={` text-4xl !bg-transparent ${inp} `} />
                 <p className={` ${primary_text} `}>mdnadil50@gmail.com</p>
               </a>
-              <a className={links} href="https://maps.app.goo.gl/Rjuf5yhaCERZ7URE6">
+              <a className={links} target="_blank" href="https://maps.app.goo.gl/Rjuf5yhaCERZ7URE6">
                 <CiLocationOn className={` text-4xl !bg-transparent ${inp} `} />
                 <p className={` ${primary_text} `}>
                   Lalbhag , Dhaka , Bangladesh
