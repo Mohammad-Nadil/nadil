@@ -15,11 +15,11 @@ const Project_card = ({
 }) => {
   let [show, setShow] = useState(false);
   return (
-    <div className="relative px-5 ">
+    <div className="relative px-2 sm:px-5 ">
       <div
         onClick={() => setShow(!show)}
         className={` hover:shadow-xl 
-        hover:shadow-white transition-all duration-300  rounded-3xl ${bg}  `}
+        sm:hover:shadow-white transition-all duration-300  rounded-3xl ${bg}  `}
       >
         <div className="img ">
           <img className="w-full h-full " src={img} alt="" />
