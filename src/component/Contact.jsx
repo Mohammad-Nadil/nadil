@@ -5,7 +5,7 @@ import { CiLocationOn, CiMail } from "react-icons/ci";
 
 const Input = ({ className, bg, label, type }) => {
   return (
-    <div className={`${className} flex flex-col gap-y-1  font-poppins`}>
+    <div className={`${className}   flex flex-col gap-y-1  font-poppins`}>
       <p>{label}</p>
       <input
         required
@@ -21,7 +21,7 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
 
   return (
     <>
-      <Container className=" autoShow autoBlur py-10 sm:px-6 2xl:py-48 xl:py-36 lg:py-28 md:py-20 sm:py-14">
+      <Container className=" autoShow  py-10 sm:px-6 2xl:py-48 xl:py-36 lg:py-28 md:py-20 sm:py-14">
         <div className="main max-w-[89.75rem] mx-auto flex flex-col xl:flex-row justify-center rounded-3xl">
           <div
             className={`left flex flex-col justify-center items-center p-5 sm:py-8 md:py-12  gap-5 sm:gap-y-7 md:gap-y-9 lg:gap-y-12 xl:gap-y-20 w-full xl:w-2/5 rounded-t-2xl xl:rounded-none xl:rounded-l-3xl border xl:border-none  ${contact} `}
