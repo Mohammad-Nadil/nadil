@@ -21,9 +21,6 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    className: "center",
-    centerMode: true,
-    centerPadding: "0px",
     pauseOnHover: true,
     responsive: [
       {
