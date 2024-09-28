@@ -23,7 +23,7 @@ import Projects from "../Projects";
 import Project_card from "../layer/Project_card";
 
 const Home = () => {
-  let [dark, setDark] = useState(false);
+  let [dark, setDark] = useState(true);
   let [menu, setMenu] = useState(false);
 
   let theme_text = ` transition-all duration-300  ${
