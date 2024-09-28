@@ -43,7 +43,7 @@ const Home = () => {
   }`;
   let theme_text_secondary = ` ${dark ? "  text-light " : "text-dark "}`;
   let theme_bg_secondary = ` ${
-    dark ? "  bg-secondary-dark/50 " : "bg-secondary-light/60 "
+    dark ? "  bg-secondary-dark/60 " : "bg-secondary-light/60 "
   }`;
 
   let theme_bg = ` transition-all duration-300  ${
@@ -123,14 +123,18 @@ const Home = () => {
         >
           <div className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7">
             <h2
-              className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem]  xl:text-6xl    ${theme_text}`}
+              className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem] after:flex after:max-w-[26rem] after:h-1 sm:after:h-2 sm:after:absolute relative after:top-full  after:left-0 after:translate-x-1/2 transition-all duration-300 after:transition-all after:duration-300  ${
+                dark
+                  ? " xl:after:bg-primary-dark text-primary-dark "
+                  : "text-primary-light xl:after:bg-primary-light"
+              }`}
             >
               Mohammad Nadil
             </h2>
             <h3
               className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${theme_text_secondary}`}
             >
-              Front-end Developer 
+              Front-end Developer & UI Designer
             </h3>
             <p className="font-poppins font-medium md:text-xl text-both max-w-[35rem] ">
               Front-end developer focused on creating Web and Mobile
