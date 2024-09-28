@@ -3,12 +3,13 @@ import Container from "./layer/Container";
 import { IoCallOutline, IoMailOpenOutline } from "react-icons/io5";
 import { CiLocationOn, CiMail } from "react-icons/ci";
 
-const Input = ({ className, bg, label, type }) => {
+const Input = ({ className, bg, label, type, name }) => {
   return (
     <div className={`${className}   flex flex-col gap-y-1  font-poppins`}>
       <p>{label}</p>
       <input
         required
+        name={name}
         type={type}
         className={`outline-none rounded-lg p-2 w-full h-full ${bg} `}
       />
@@ -53,6 +54,8 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
             </div>
           </div>
           <form
+            action="https://formspree.io/f/mblrnyjv"
+            method="POST"
             className={`right pt-10 sm:pt-14 md:pt-16 lg:pt-20 xl:pt-14 pb-6 sm:pb-6 md:pb-8 px-3 sm:px-6 md:px-10 lg:px-12 xl:px-16 w-full xl:w-3/5 flex flex-col gap-y-3 lg:gap-y-10 text-lg font-poppins font-medium left-7 rounded-b-2xl xl:rounded-none  xl:rounded-r-3xl border xl:border-none ${inp} `}
           >
             <div
@@ -61,22 +64,30 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
               <Input
                 bg={inp_bg}
                 type="text"
+                name="name"
                 label="Your name"
                 className="md:w-2/5"
               />
               <Input
                 bg={inp_bg}
                 type="email"
+                name="email"
                 label="Your Email"
                 className=" md:w-3/5"
               />
             </div>
             <div className="sub">
-              <Input bg={inp_bg} type="text" label="Your subject" />
+              <Input
+                bg={inp_bg}
+                type="text"
+                name="subject"
+                label="Your subject"
+              />
             </div>
             <div className="msg">
               <p>Message</p>
               <textarea
+                name="message"
                 required
                 rows="6"
                 className={` w-full outline-none rounded-lg p-2 ${inp_bg} `}
