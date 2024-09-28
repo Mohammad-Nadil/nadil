@@ -94,14 +94,9 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
               ></textarea>
             </div>
             <div className="flex justify-end ">
-              <button type="submit">
-                <a
-                  href="#"
-                  className={`flex  items-center gap-3 rounded-xl py-3 px-16 text-xl font-semibold  hover:bg-slate-500 ${invert_btn}  `}
-                >
+              <button className={`flex  items-center gap-3 rounded-xl py-3 px-16 text-xl font-semibold  hover:bg-slate-500 ${invert_btn}  `} type="submit">
                   <IoMailOpenOutline />
                   <p>send</p>
-                </a>
               </button>
             </div>
           </form>
