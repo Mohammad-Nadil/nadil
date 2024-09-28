@@ -130,7 +130,7 @@ const Home = () => {
             <h3
               className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${theme_text_secondary}`}
             >
-              Front-end Developer & UI Designer
+              Front-end Developer 
             </h3>
             <p className="font-poppins font-medium md:text-xl text-both max-w-[35rem] ">
               Front-end developer focused on creating Web and Mobile
