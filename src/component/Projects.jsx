@@ -27,7 +27,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
     centerPadding: "0px",
     responsive: [
       {
-        breakpoint: 1030,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,

@@ -39,10 +39,10 @@ const Project_card = ({
             <MdOutlineWeb className={` text-3xl ${primary_text}`} />
             <p>{project_type}</p>
           </div>
-          <div className="flex gap-x-2">
+          <div className="flex text-xs md:text-sm gap-x-2">
             <a
               target="_blank"
-              className="flex items-center justify-between py-2 px-2  xl:py-3 transition-all duration-300 cursor-pointer text-sm   w-1/2  xl:gap-x-3 rounded-lg xl:rounded-xl hover:text-white hover:bg-gray-400"
+              className="flex items-center justify-between py-2 px-2  xl:py-3 transition-all duration-300 cursor-pointer    w-1/2  xl:gap-x-3 rounded-lg xl:rounded-xl hover:text-white hover:bg-gray-400"
               href={github}
             >
               View Code

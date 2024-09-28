@@ -17,7 +17,7 @@ const Input = ({ className, bg, label, type }) => {
 };
 
 const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
-  let links = `flex font-poppins text-xl sm:text-2xl font-medium leading-9 items-center gap-x-6`;
+  let links = `flex font-poppins text-xl sm:text-2xl font-medium leading-9 items-center gap-x-3 sm:gap-x-6`;
 
   return (
     <>
@@ -33,7 +33,7 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
                 CONTACT
               </p>
             </div>
-            <div className="flex flex-col link gap-y-6 2xl:gap-y-14 ">
+            <div className="flex flex-col link  gap-y-6 2xl:gap-y-14 ">
               <a className={links} href="tel:+8801760152349">
                 <IoCallOutline className={` text-4xl !bg-transparent ${inp} `} />
                 <p className={` ${primary_text} `}>+880 1760152349</p>
