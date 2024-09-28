@@ -45,7 +45,7 @@ const Contact = ({ inp, contact, inp_bg, invert_btn, primary_text }) => {
                 <CiMail className={` text-4xl !bg-transparent ${inp} `} />
                 <p className={` ${primary_text} `}>mdnadil50@gmail.com</p>
               </a>
-              <a className={links} href="">
+              <a className={links} href="https://maps.app.goo.gl/Rjuf5yhaCERZ7URE6">
                 <CiLocationOn className={` text-4xl !bg-transparent ${inp} `} />
                 <p className={` ${primary_text} `}>
                   Lalbhag , Dhaka , Bangladesh
