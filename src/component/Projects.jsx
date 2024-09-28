@@ -109,7 +109,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           bg={card_bg}
           img={medicalFunc}
           primary_text={primary_clr}
-          name="medicalFunc"
+          name="medicFunc"
           project_type="tailwind project"
           github="https://github.com/Mohammad-Nadil/MedicalFunc"
           vercel="https://medical-func.vercel.app/"
