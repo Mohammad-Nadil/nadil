@@ -13,7 +13,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
 
   const settings = {
     autoplay: true,
-    speed: 2000,
+    speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false,
@@ -24,6 +24,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
     className: "center",
     centerMode: true,
     centerPadding: "0px",
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
