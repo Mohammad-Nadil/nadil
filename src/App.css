@@ -55,9 +55,6 @@
   30% , 90% {
     filter: blur(0);
   }
-  95% {
-    filter: blur(20px);
-  }
   100% {
     filter: blur(40px);
   }
