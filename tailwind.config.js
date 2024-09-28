@@ -1,6 +1,7 @@
+const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}" , ],
   theme: {
     extend: {
       colors: {
@@ -18,5 +19,8 @@ export default {
       poppins: ['"Poppins"', "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: []
 };
+
+// flowbite.content(),
+// flowbite.plugin(),require('daisyui'),
