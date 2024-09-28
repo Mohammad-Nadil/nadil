@@ -7,11 +7,11 @@ const About = ({ head, color }) => {
       <Container className=" py-32 xl:py-40 2xl:py-48">
         <div className="flex flex-col max-w-[59rem] mx-auto gap-y-8" >
           <h2
-            className={`text-center font-poppins font-bold text-5xl leading-[75px] ${head}`}
+            className={`text-center font-poppins font-bold text-5xl leading-[75px] autoBlur ${head}`}
           >
             ABOUT ME
           </h2>
-          <p className="font-poppins text-center text-2xl md:text-3xl leading-[45px] text-both">
+          <p className="font-poppins text-center text-2xl md:text-3xl leading-[45px] text-both autoBlur">
             I'm <span className={`${color}`}>Mohammad Nadil</span> , I'm{" "}
             <span className={`${color}`}>21</span> years old and I live in{" "}
             <span className={`${color}`}>Dhaka , Bangladesh</span>. <br />

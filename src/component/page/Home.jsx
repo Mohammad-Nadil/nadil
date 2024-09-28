@@ -119,15 +119,11 @@ const Home = () => {
       </nav>
       <section id="#" className={theme_bg_gradient}>
         <Container
-          className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-80 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden`}
+          className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-80 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden autoShow`}
         >
           <div className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7">
             <h2
-              className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem] after:flex after:max-w-[26rem] after:h-1 sm:after:h-2 sm:after:absolute relative after:top-full  after:left-0 after:translate-x-1/2 transition-all duration-300 after:transition-all after:duration-300  ${
-                dark
-                  ? " xl:after:bg-primary-dark text-primary-dark "
-                  : "text-primary-light xl:after:bg-primary-light"
-              }`}
+              className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem]  ${theme_text}`}
             >
               Mohammad Nadil
             </h2>
@@ -136,12 +132,12 @@ const Home = () => {
             >
               Front-end Developer & UI Designer
             </h3>
-            <p className="font-poppins font-medium md:text-xl text-both max-w-[35rem] ">
+            <p className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  ">
               Front-end developer focused on creating Web and Mobile
               applications. I really like different projects that solve real
               problems.
             </p>
-            <div className="flex gap-3 icon sm:gap-5 md:gap-7">
+            <div className="flex gap-3 icon sm:gap-5 md:gap-7 ">
               <Anc
                 color={theme_text_bg}
                 icon={<FaFacebookSquare />}
@@ -181,10 +177,10 @@ const Home = () => {
         </Container>
       </section>
       <section className="bg_img " id="service">
-        <Container className="py-32 xl:py-40 2xl:py-48">
+        <Container className="py-32 xl:py-40 2xl:py-48 ">
           <div className="flex flex-col gap-14 max-w-[1140px] mx-auto">
-            <div className="head">
-              <h2 className="text-5xl font-bold text-center text-white font-poppins">
+            <div className="head ">
+              <h2 className="text-5xl font-bold text-center text-white font-poppins autoShow">
                 My Services
               </h2>
             </div>

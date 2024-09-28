@@ -12,8 +12,47 @@
   left: 0;
   z-index: -1;
 }
-.bg_img{
-  background: url(/bg_image.jpg) no-repeat right /cover;
+.bg_img {
+  background: url(/bg_image.jpg) no-repeat right / cover;
   position: relative;
   z-index: 10;
+}
+.autoShow {
+  animation: autoShowAnimation both linear;
+  animation-timeline: view();
+}
+
+@keyframes autoShowAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.1);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.1);
+  }
+}
+.autoBlur {
+  animation: autoBlurAnimation both linear;
+  animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(50px);
+  }
+  30% , 90% {
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(50px);
+  }
 }
