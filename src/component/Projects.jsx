@@ -19,7 +19,6 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
     arrows: false,
     dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     className: "center",
