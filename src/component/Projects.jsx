@@ -6,6 +6,7 @@ import QWERy from "/QWERy.png";
 import medicalFunc from "/medicalFunc.png";
 import orebi from "/orebi.png";
 import agenc from "/agenc.png";
+import morent from "/morent.png";
 import Project_card from "./layer/Project_card";
 
 const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
@@ -132,6 +133,17 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           project_type="vanilla project"
           github="https://github.com/Mohammad-Nadil/QWERy"
           vercel="https://qwery-phi.vercel.app/"
+        />
+        <Project_card
+          primary_text={primary_clr}
+          btn_clr={bg_clr}
+          txt_clr={text}
+          bg={card_bg}
+          img={morent}
+          name="morent"
+          project_type="react project"
+          github="https://github.com/Mohammad-Nadil/morent"
+          vercel="https://morent-hazel.vercel.app/"
         />
       </Slider>
     </Container>
