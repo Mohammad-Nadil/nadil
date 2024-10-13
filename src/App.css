@@ -40,6 +40,7 @@
     transform: translateY(-100px) scale(0.1);
   }
 }
+
 .autoBlur {
   animation: autoBlurAnimation both linear;
   animation-timeline: view();

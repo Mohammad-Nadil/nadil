@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Container from "../layer/Container";
 import {
-  FaCode,
   FaFacebookSquare,
   FaGithub,
   FaLinkedinIn,
@@ -12,15 +11,27 @@ import profile from "/profile.jpg";
 import Li from "../layer/Li";
 import { IoMenu } from "react-icons/io5";
 import Anc from "../layer/Anc";
-import ServiceLi from "../layer/ServiceLi";
-import { BiServer } from "react-icons/bi";
-import { MdDesignServices, MdDevices } from "react-icons/md";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { RiLayoutMasonryLine } from "react-icons/ri";
 import About from "../About";
 import Contact from "../Contact";
 import Projects from "../Projects";
-import Project_card from "../layer/Project_card";
+import { motion } from "framer-motion";
+import Service from "../layer/Service";
+
+
+
+
+// Animation variants for each element
+const containerVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }
+};
+
+
 
 const Home = () => {
   let [dark, setDark] = useState(true);
@@ -75,22 +86,27 @@ const Home = () => {
       <nav className="absolute z-50 w-full top-2 ">
         <Container className="flex items-center justify-between">
           <div className="logo">
-            <h2
+            <motion.h2  initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
               className={`font-rubik font-black text-5xl lg:text-6xl transition-all duration-300 ${theme_text}  `}
             >
               NADIL
-            </h2>
+            </motion.h2>
           </div>
           <ul
             className={`absolute  top-full items-end md:items-center right-5 md:static flex flex-col md:flex-row lg:bg-transparent md:gap-x-5  lg:gap-x-10 xl:gap-x-16 2xl:gap-x-20 md:opacity-100 md:visible ${
               menu ? "opacity-100 visible" : " opacity-0 invisible"
             }`}
-          >
-            <Li litext="Home" color={theme_text} />
-            <Li href="#service" litext="Services" color={theme_text_hover} />
-            <Li href="#about" litext="About me" color={theme_text_hover} />
-            <Li href="#projects" litext="Projects" color={theme_text_hover} />
-            <Li href="#contact" litext="Contact" color={theme_text_hover} />
+          > {["Home", "Services", "About me", "Projects", "Contact"].map((text, index) => (
+            <Li
+              key={text}
+              litext={text}
+              href={`#${text.toLowerCase().replace(" ", "")}`}
+              color={theme_text_hover}
+              index={index} // Pass index to Li for animation delay
+            />
+          ))}
           </ul>
           <div className="flex items-center gap-x-5">
             <div
@@ -119,25 +135,30 @@ const Home = () => {
       </nav>
       <section id="#" className={theme_bg_gradient}>
         <Container
-          className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-80 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden autoShow`}
+          className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-60 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden autoShow`}
         >
-          <div className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7">
-            <h2
+          <motion.div  initial="hidden"
+            animate="visible"
+            variants={containerVariants} className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7">
+            <motion.h2
               className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem]  ${theme_text}`}
             >
               Mohammad Nadil
-            </h2>
-            <h3
+            </motion.h2>
+            <motion.h3
+             variants={itemVariants}
               className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${theme_text_secondary}`}
             >
               Front-end Developer & UI Designer
-            </h3>
-            <p className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  ">
+            </motion.h3>
+            <motion.p variants={itemVariants} className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  ">
               Front-end developer focused on creating Web and Mobile
               applications. I really like different projects that solve real
               problems.
-            </p>
-            <div className="flex gap-3 icon sm:gap-5 md:gap-7 ">
+            </motion.p>
+            <motion.div  initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }} className="flex gap-3 icon sm:gap-5 md:gap-7 ">
               <Anc
                 color={theme_text_bg}
                 icon={<FaFacebookSquare />}
@@ -159,9 +180,11 @@ const Home = () => {
                 icon={<FaPhoneAlt />}
                 href="tel:+8801760152349"
               />
-            </div>
-          </div>
-          <div className="right">
+            </motion.div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1.5 }} className="right">
             <div className="image">
               <img
                 className={` w-[70vw] sm:w-auto rounded-full ${
@@ -173,47 +196,11 @@ const Home = () => {
                 alt=""
               />
             </div>
-          </div>
+          </motion.div>
         </Container>
       </section>
       <section className="bg_img " id="service">
-        <Container className="py-32 xl:py-40 2xl:py-48 ">
-          <div className="flex flex-col gap-14 max-w-[1140px] mx-auto">
-            <div className="head ">
-              <h2 className="text-5xl font-bold text-center text-white font-poppins autoShow">
-                My Services
-              </h2>
-            </div>
-            <div className="list">
-              <ul className="flex flex-col w-full sm:flex-row sm:flex-wrap gap-y-8 sm:gap-y-10 md:gap-y-12">
-                <ServiceLi
-                  text="Web Development"
-                  icon={<FaCode className={theme_icon_primary} />}
-                />
-                <ServiceLi
-                  text="API Integration"
-                  icon={<BiServer className={theme_icon_primary} />}
-                />
-                <ServiceLi
-                  text="  UI/UX Design Implementation"
-                  icon={<MdDesignServices className={theme_icon_primary} />}
-                />
-                <ServiceLi
-                  text="Cross-Browser Compatibility"
-                  icon={<AiOutlineGlobal className={theme_icon_primary} />}
-                />
-                <ServiceLi
-                  text="Landing Page Design"
-                  icon={<RiLayoutMasonryLine className={theme_icon_primary} />}
-                />
-                <ServiceLi
-                  text="Responsive Web Design"
-                  icon={<MdDevices className={theme_icon_primary} />}
-                />
-              </ul>
-            </div>
-          </div>
-        </Container>
+        <Service theme_icon_primary={theme_icon_primary} />
       </section>
       <section id="about" className={theme_bg_gradient}>
         <About head={theme_text_secondary} color={theme_text} />
