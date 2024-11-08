@@ -5,7 +5,7 @@ const About = ({ head, color }) => {
   return (
     <>
       <Container className=" py-32 xl:py-40 2xl:py-48">
-        <div className="flex flex-col max-w-[59rem] mx-auto gap-y-8" >
+        <div className="flex flex-col max-w-[59rem] mx-auto gap-y-8">
           <h2
             className={`text-center font-poppins font-bold text-5xl leading-[75px] autoBlur ${head}`}
           >
@@ -26,6 +26,31 @@ const About = ({ head, color }) => {
             <span className={`${color}`}>Medical website </span> and{" "}
             <span className={`${color}`}> Web Apps</span>.
           </p>
+          <div className="skills-section mt-10 text-center">
+            <h3 className={`font-poppins font-bold text-4xl mb-6 ${head}`}>
+              Technical Skills
+            </h3>
+            <ul className="flex flex-wrap justify-center gap-4">
+              {[
+                "HTML5",
+                "CSS3",
+                "JavaScript ES6",
+                "Tailwind CSS",
+                "Bootstrap",
+                "React.js",
+                "Next.js",
+                "GSAP",
+                "Framer Motion",
+              ].map((skill) => (
+                <li
+                  key={skill}
+                  className={` text-${color} border border-gray-400 px-4 py-2 rounded-md font-medium`}
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Container>
     </>
