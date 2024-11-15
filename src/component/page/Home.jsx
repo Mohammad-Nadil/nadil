@@ -95,7 +95,7 @@ const Home = () => {
             </motion.h2>
           </div>
           <ul
-            className={`absolute  top-full items-end md:items-center right-5 md:static flex flex-col md:flex-row lg:bg-transparent md:gap-x-5  lg:gap-x-10 xl:gap-x-16 2xl:gap-x-20 md:opacity-100 md:visible ${
+            className={`absolute  top-full items-end md:items-center right-5 md:static flex flex-col md:flex-row lg:bg-transparent md:gap-x-5 duration-300 lg:gap-x-10 xl:gap-x-16 2xl:gap-x-20 md:opacity-100 md:visible ${
               menu ? "opacity-100 visible" : " opacity-0 invisible"
             }`}
           > {["Home", "Services", "About me", "Projects", "Contact"].map((text, index) => (
@@ -104,7 +104,7 @@ const Home = () => {
               litext={text}
               href={`#${text.toLowerCase().replace(" ", "")}`}
               color={theme_text_hover}
-              index={index} // Pass index to Li for animation delay
+              index={index}
             />
           ))}
           </ul>
