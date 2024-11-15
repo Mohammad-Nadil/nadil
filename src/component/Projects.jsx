@@ -13,7 +13,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
   let [active, setActive] = useState(0);
 
   const settings = {
-    autoplay: true,
+    // autoplay: true,
     speed: 500,
     autoplaySpeed: 2000,
     cssEase: "linear",
@@ -64,8 +64,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           className="flex gap-5  absolute top-full translate-y-full left-1/2 -translate-x-1/2 "
           style={{ margin: "0px" }}
         >
-          {" "}
-          {dots}{" "}
+          {dots}
         </ul>
       </div>
     ),
@@ -74,13 +73,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
         className={`$  ${
           active == i ? ` ${primary_bg} ` : "bg-slate-500/50"
         }  w-12 h-3 rounded-full `}
-        // style={{
-        //   width: "30px",
-        //   color: "blue",
-        //   border: "1px blue solid"
-        // }}
       >
-        {/* {i + 1} */}
       </div>
     ),
     beforeChange: (a, b) => {
@@ -97,7 +90,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           bg={card_bg}
           img={orebi}
           name="OREBI"
-          project_type="react project"
+          project_type="react project ( ongoing )"
           github="https://github.com/Mohammad-Nadil/orebi"
           vercel="https://orebi-taupe.vercel.app/"
         />
@@ -130,7 +123,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           bg={card_bg}
           img={QWERy}
           name="QWERy"
-          project_type="vanilla project"
+          project_type="vanilla project with gsap"
           github="https://github.com/Mohammad-Nadil/QWERy"
           vercel="https://qwery-phi.vercel.app/"
         />
@@ -141,7 +134,7 @@ const Projects = ({ card_bg, text, primary_bg, bg_clr, primary_clr }) => {
           bg={card_bg}
           img={morent}
           name="morent"
-          project_type="react project"
+          project_type=" react project "
           github="https://github.com/Mohammad-Nadil/morent"
           vercel="https://morent-hazel.vercel.app/"
         />
