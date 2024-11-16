@@ -26,7 +26,7 @@ const About = ({ head, color }) => {
             <span className={`${color}`}>Medical website </span> and{" "}
             <span className={`${color}`}> Web Apps</span>.
           </p>
-          <div className="skills-section mt-10 text-center">
+          <div className="skills-section mt-10 text-center autoBlur">
             <h3 className={`font-poppins font-bold text-4xl mb-6 ${head}`}>
               Technical Skills
             </h3>
