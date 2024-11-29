@@ -16,6 +16,7 @@
   background: url(/bg_image.jpg) no-repeat right / cover;
   position: relative;
   z-index: 10;
+  background-attachment: fixed;
 }
 .autoShow {
   animation: autoShowAnimation both linear;

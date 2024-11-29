@@ -111,7 +111,7 @@ const Home = () => {
           <div className="flex items-center gap-x-5">
             <div
               onClick={() => setDark(!dark)}
-              className={` transition-all duration-300 w-12 md:w-16 lg:w-20 xl:w-24 h-6 md:h-8 lg:h-10 xl:h-12 rounded-full relative ${
+              className={`  w-12 md:w-16 lg:w-20 xl:w-24 h-6 md:h-8 lg:h-10 xl:h-12 rounded-full relative ${
                 dark ? "bg-light " : "bg-dark "
               } `}
             >
@@ -120,7 +120,7 @@ const Home = () => {
                 className={` transition-all duration-300 inline-block absolute top-1/2 -translate-y-1/2 w-4 md:w-6 lg:w-8 xl:w-10 h-4 md:h-6 lg:h-8 xl:h-10 rounded-full ${
                   dark
                     ? " right-1 bg-primary-light "
-                    : "bg-primary-dark left-1 "
+                    : "bg-primary-dark right-[95%] translate-x-full "
                 }`}
               ></a>
             </div>
@@ -149,11 +149,11 @@ const Home = () => {
              variants={itemVariants}
               className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${theme_text_secondary}`}
             >
-              Front-end Developer & UI Designer
+              Front-end Developer
             </motion.h3>
             <motion.p variants={itemVariants} className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  ">
-              Front-end developer focused on creating Web and Mobile
-              applications. I really like different projects that solve real
+              Front-end developer focused on creating Websites and Web
+              apps. I really like different projects that solve real
               problems.
             </motion.p>
             <motion.div  initial={{ opacity: 0, scale: 0.8 }}
