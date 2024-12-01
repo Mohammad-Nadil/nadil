@@ -199,10 +199,10 @@ const Home = () => {
           </motion.div>
         </Container>
       </section>
-      <section className="bg_img " id="service">
+      <section className="bg_img " id="services">
         <Service theme_icon_primary={theme_icon_primary} />
       </section>
-      <section id="about" className={theme_bg_gradient}>
+      <section id="aboutme" className={theme_bg_gradient}>
         <About head={theme_text_secondary} color={theme_text} />
       </section>
       <section className="bg_img" id="projects">

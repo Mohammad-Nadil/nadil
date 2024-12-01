@@ -44,7 +44,7 @@ const About = ({ head, color }) => {
               ].map((skill) => (
                 <li
                   key={skill}
-                  className={` text-${color} border border-gray-400 px-4 py-2 rounded-md font-medium`}
+                  className={` text-${color} border border-gray-400 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md font-medium`}
                 >
                   {skill}
                 </li>
