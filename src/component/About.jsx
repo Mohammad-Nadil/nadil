@@ -1,10 +1,49 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiFramer,
+  SiGreensock,
+  SiRedux,
+} from "react-icons/si";
 import Container from "./layer/Container";
+
+const skillIcons = {
+  HTML5: <FaHtml5 className="text-orange-500" />,
+  CSS3: <FaCss3Alt className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-500" />,
+  Tailwind: <SiTailwindcss className="text-blue-400" />,
+  Bootstrap: <FaBootstrap className="text-purple-500" />,
+  React: <FaReact className="text-blue-400" />,
+  Next: <SiNextdotjs className="text-gray-500" />,
+  GSAP: <SiGreensock className="text-green-500" />,
+  Framer: <SiFramer className="text-purple-400" />,
+  Redux: <SiRedux className="text-purple-600" />,
+};
+
+// Animation Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Time between each child animation
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const About = ({ head, color }) => {
   return (
     <>
-      <Container className=" py-32 xl:py-40 2xl:py-48">
+      <Container className="py-32 xl:py-40 2xl:py-48">
         <div className="flex flex-col max-w-[59rem] mx-auto gap-y-8">
           <h2
             className={`text-center font-poppins font-bold text-5xl leading-[75px] autoBlur ${head}`}
@@ -26,30 +65,27 @@ const About = ({ head, color }) => {
             <span className={`${color}`}>Medical website </span> and{" "}
             <span className={`${color}`}> Web Apps</span>.
           </p>
-          <div className="skills-section mt-10 text-center autoBlur">
+          <div className="skills-section mt-10 text-center ">
             <h3 className={`font-poppins font-bold text-4xl mb-6 ${head}`}>
               Technical Skills
             </h3>
-            <ul className="flex flex-wrap justify-center gap-4">
-              {[
-                "HTML5",
-                "CSS3",
-                "JavaScript ES6",
-                "Tailwind CSS",
-                "Bootstrap",
-                "React.js",
-                "Next.js",
-                "GSAP",
-                "Framer Motion",
-              ].map((skill) => (
-                <li
+            <motion.ul
+              className="flex flex-wrap justify-center gap-4"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% is in view
+            >
+              {Object.entries(skillIcons).map(([skill, icon]) => (
+                <motion.li
                   key={skill}
-                  className={` text-${color} border border-gray-400 px-3 sm:px-4 py-1.5 sm:py-2 rounded-md font-medium`}
+                  className="border border-gray-500 p-2 sm:p-3 rounded-md font-poppins text-5xl"
+                  variants={itemVariants}
                 >
-                  {skill}
-                </li>
+                  {icon}
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           </div>
         </div>
       </Container>

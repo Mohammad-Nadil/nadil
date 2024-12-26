@@ -7,7 +7,7 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import profile from "/profile.jpg";
+import profile from "/main.png";
 import Li from "../layer/Li";
 import { IoMenu } from "react-icons/io5";
 import Anc from "../layer/Anc";
@@ -185,9 +185,9 @@ const Home = () => {
           <motion.div initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }} className="right">
-            <div className="image">
+            <div className="image aspect-square w-[70vw]  sm:w-auto">
               <img
-                className={` w-[70vw] sm:w-auto rounded-full ${
+                className={` h-full w-full object-cover rounded-full ${
                   dark
                     ? "border-2 border-primary-dark"
                     : "border-2 border-primary-light"

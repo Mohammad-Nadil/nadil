@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 import Home from './component/page/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
