@@ -31,9 +31,9 @@ const Project_card = ({
           <FaAngleDown className="text-3xl" />
         </div>
         <div
-          className={` ${txt_clr} links  font-poppins font-semibold xl:text-xl bg-transparent   flex flex-col gap-y-2 xl:gap-y-7 px-6 pb-5 ${bg} ${
-            show ? "  " : " opacity-0 h-0"
-          }  `}
+          className={` ${txt_clr} links font-poppins font-semibold xl:text-xl bg-transparent duration-500 flex flex-col gap-y-2 xl:gap-y-7 px-6 pb-5 ${bg} ${
+            show ? "opacity-100 max-h-[20rem]" : "opacity-0 max-h-0"
+          } overflow-hidden transition-all`}
         >
           <div className="flex items-center gap-x-4">
             <MdOutlineWeb className={` text-3xl ${primary_text}`} />
