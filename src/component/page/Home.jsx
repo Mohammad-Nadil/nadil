@@ -17,21 +17,16 @@ import Projects from "../Projects";
 import { motion } from "framer-motion";
 import Service from "../layer/Service";
 
-
-
-
 // Animation variants for each element
 const containerVariants = {
   hidden: { opacity: 0, y: -50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } }
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } },
 };
-
-
 
 const Home = () => {
   let [dark, setDark] = useState(true);
@@ -86,7 +81,8 @@ const Home = () => {
       <nav className="absolute z-50 w-full top-2 ">
         <Container className="flex items-center justify-between">
           <div className="logo">
-            <motion.h2  initial={{ opacity: 0, x: -50 }}
+            <motion.h2
+              initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className={`font-rubik font-black text-5xl lg:text-6xl transition-all duration-300 ${theme_text}  `}
@@ -98,15 +94,19 @@ const Home = () => {
             className={`absolute  top-full items-end md:items-center right-5 md:static flex flex-col md:flex-row lg:bg-transparent md:gap-x-5 duration-300 lg:gap-x-10 xl:gap-x-16 2xl:gap-x-20 md:opacity-100 md:visible ${
               menu ? "opacity-100 visible" : " opacity-0 invisible"
             }`}
-          > {["Home", "Services", "About me", "Projects", "Contact"].map((text, index) => (
-            <Li
-              key={text}
-              litext={text}
-              href={`#${text.toLowerCase().replace(" ", "")}`}
-              color={theme_text_hover}
-              index={index}
-            />
-          ))}
+          >
+            {" "}
+            {["Home", "Services", "About me", "Projects", "Contact"].map(
+              (text, index) => (
+                <Li
+                  key={text}
+                  litext={text}
+                  href={`#${text.toLowerCase().replace(" ", "")}`}
+                  color={theme_text_hover}
+                  index={index}
+                />
+              )
+            )}
           </ul>
           <div className="flex items-center gap-x-5">
             <div
@@ -137,28 +137,36 @@ const Home = () => {
         <Container
           className={`flex flex-col-reverse sm:flex-row justify-between items-center pt-28 md:pt-32 xl:pt-40 2xl:pt-60 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden autoShow`}
         >
-          <motion.div  initial="hidden"
+          <motion.div
+            initial="hidden"
             animate="visible"
-            variants={containerVariants} className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7">
+            variants={containerVariants}
+            className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7"
+          >
             <motion.h2
               className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem]  ${theme_text}`}
             >
               Mohammad Nadil
             </motion.h2>
             <motion.h3
-             variants={itemVariants}
+              variants={itemVariants}
               className={` font-poppins font-bold text-3xl md:text-5xl max-w-[36rem]  ${theme_text_secondary}`}
             >
               Front-end Developer
             </motion.h3>
-            <motion.p variants={itemVariants} className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  ">
-              Front-end developer focused on creating Websites and Web
-              apps. I really like different projects that solve real
-              problems.
+            <motion.p
+              variants={itemVariants}
+              className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  "
+            >
+              Front-end developer focused on creating Websites and Web apps. I
+              really like different projects that solve real problems.
             </motion.p>
-            <motion.div  initial={{ opacity: 0, scale: 0.8 }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }} className="flex gap-3 icon sm:gap-5 md:gap-7 ">
+              transition={{ duration: 0.8, delay: 1.2 }}
+              className="flex gap-3 icon sm:gap-5 md:gap-7 "
+            >
               <Anc
                 color={theme_text_bg}
                 icon={<FaFacebookSquare />}
@@ -182,9 +190,12 @@ const Home = () => {
               />
             </motion.div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.8 }}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1.5 }} className="right">
+            transition={{ duration: 0.8, delay: 1.5 }}
+            className="right"
+          >
             <div className="image aspect-square w-[70vw]  sm:w-auto">
               <img
                 className={` h-full w-full object-cover rounded-full ${
@@ -193,7 +204,7 @@ const Home = () => {
                     : "border-2 border-primary-light"
                 }`}
                 src={profile}
-                alt=""
+                alt={profile}
               />
             </div>
           </motion.div>

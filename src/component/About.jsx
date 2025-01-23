@@ -12,16 +12,16 @@ import {
 import Container from "./layer/Container";
 
 const skillIcons = {
-  HTML5: <FaHtml5 className="text-orange-500" />,
-  CSS3: <FaCss3Alt className="text-blue-500" />,
-  JavaScript: <SiJavascript className="text-yellow-500" />,
-  Tailwind: <SiTailwindcss className="text-blue-400" />,
-  Bootstrap: <FaBootstrap className="text-purple-500" />,
-  React: <FaReact className="text-blue-400" />,
-  Next: <SiNextdotjs className="text-gray-500" />,
-  GSAP: <SiGreensock className="text-green-500" />,
-  Framer: <SiFramer className="text-purple-400" />,
-  Redux: <SiRedux className="text-purple-600" />,
+  HTML5: <FaHtml5 className="text-orange-500 " />,
+  CSS3: <FaCss3Alt className="text-blue-500 " />,
+  JavaScript: <SiJavascript className="text-yellow-500 " />,
+  Tailwind: <SiTailwindcss className="text-blue-400 " />,
+  Bootstrap: <FaBootstrap className="text-purple-500 " />,
+  React: <FaReact className="text-blue-400 " />,
+  Next: <SiNextdotjs className="text-gray-500 " />,
+  GSAP: <SiGreensock className="text-green-500 " />,
+  Framer: <SiFramer className="text-purple-400 " />,
+  Redux: <SiRedux className="text-purple-600 " />,
 };
 
 // Animation Variants
@@ -70,7 +70,7 @@ const About = ({ head, color }) => {
               Technical Skills
             </h3>
             <motion.ul
-              className="flex flex-wrap justify-center gap-4"
+              className="flex flex-wrap justify-center gap-4 group"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -79,7 +79,7 @@ const About = ({ head, color }) => {
               {Object.entries(skillIcons).map(([skill, icon]) => (
                 <motion.li
                   key={skill}
-                  className="border border-gray-500 p-2 sm:p-3 rounded-md font-poppins text-5xl"
+                  className={`border border-gray-500 p-2 sm:p-3 rounded-md font-poppins text-5xl  hover:!scale-125 transition-all duration-300  `}
                   variants={itemVariants}
                 >
                   {icon}
