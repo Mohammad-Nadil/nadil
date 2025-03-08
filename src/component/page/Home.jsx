@@ -196,17 +196,27 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="right"
           >
-            <div className="image aspect-square w-[70vw]  sm:w-auto">
-              <img
-                className={` h-full w-full object-cover rounded-full ${
+            <motion.div
+              drag
+              dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} // Keeps it from moving indefinitely
+              className="image aspect-square w-[70vw] sm:w-[40vw] md:w-[40vw] lg:w-[40vw] xl:w-[35vw] 2xl:w-[25vw] relative z-50"
+            >
+              <motion.img
+                whileDrag={{ scale: 0.9, rotate: 0 }}
+                drag
+                className={`h-full w-full object-cover rounded-full ${
                   dark
                     ? "border-2 border-primary-dark"
                     : "border-2 border-primary-light"
                 }`}
                 src={profile}
                 alt={profile}
+                dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
+                onDragEnd={(event, info) => {
+                  event.target.style.transform = "translate(0px, 0px)"; // Resets position after drag
+                }}
               />
-            </div>
+            </motion.div>
           </motion.div>
         </Container>
       </section>
