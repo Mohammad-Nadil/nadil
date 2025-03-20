@@ -4,12 +4,41 @@ import { BiServer } from "react-icons/bi";
 import { FaCode } from "react-icons/fa";
 import { MdDesignServices, MdDevices } from "react-icons/md";
 import { RiLayoutMasonryLine } from "react-icons/ri";
-import ServiceLi from "./ServiceLi";
 import Container from "./Container";
+import { useSelector } from "react-redux";
 
-const Service = ({theme_icon_primary}) => {
+const Service = ({}) => {
+  let dark = useSelector((state) => state.theme.darkMode);
+
+  let Li = [
+    {
+      text: "Web Development",
+      icon: <FaCode />,
+    },
+    {
+      text: "API Integration",
+      icon: <BiServer />,
+    },
+    {
+      text: "  UI/UX Design Implementation",
+      icon: <MdDesignServices />,
+    },
+    {
+      text: "Cross-Browser Compatibility",
+      icon: <AiOutlineGlobal />,
+    },
+    {
+      text: "Landing Page Design",
+      icon: <RiLayoutMasonryLine />,
+    },
+    {
+      text: "Responsive Web Design",
+      icon: <MdDevices />,
+    },
+  ];
+
   return (
-    <div>
+    <section className="bg_img " id="services">
       <Container className="py-32 xl:py-40 2xl:py-48 ">
         <div className="flex flex-col gap-14 max-w-[1140px] mx-auto">
           <div className="head ">
@@ -19,35 +48,25 @@ const Service = ({theme_icon_primary}) => {
           </div>
           <div className="list">
             <ul className="flex flex-col w-full sm:flex-row sm:flex-wrap gap-y-8 sm:gap-y-10 md:gap-y-12">
-              <ServiceLi
-                text="Web Development"
-                icon={<FaCode className={theme_icon_primary} />}
-              />
-              <ServiceLi
-                text="API Integration"
-                icon={<BiServer className={theme_icon_primary} />}
-              />
-              <ServiceLi
-                text="  UI/UX Design Implementation"
-                icon={<MdDesignServices className={theme_icon_primary} />}
-              />
-              <ServiceLi
-                text="Cross-Browser Compatibility"
-                icon={<AiOutlineGlobal className={theme_icon_primary} />}
-              />
-              <ServiceLi
-                text="Landing Page Design"
-                icon={<RiLayoutMasonryLine className={theme_icon_primary} />}
-              />
-              <ServiceLi
-                text="Responsive Web Design"
-                icon={<MdDevices className={theme_icon_primary} />}
-              />
+              {Li.map((item, index) => (
+                <li key={index} className=" autoShow pr-3 sm:w-1/2 flex items-center gap-x-3 md:gap-x-5 lg:gap-x-7">
+                  <p
+                    className={`text-4xl lg:text-5xl  transition-all duration-300  ${
+                      dark ? "text-primary-dark" : " text-primary-light"
+                    }`}
+                  >
+                    {item.icon}
+                  </p>
+                  <p className=" text-light font-poppins text-2xl sm:text-2xl lg:text-3xl leading-10">
+                    {item.text}
+                  </p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
