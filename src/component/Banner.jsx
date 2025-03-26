@@ -58,20 +58,20 @@ const Banner = () => {
   return (
     <section
       id="#"
-      className={`${
+      className={`relative z-0${
         dark
           ? " bg-gradient-to-r from-[#363636] to-dark bg-dark"
           : " bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
       }`}
-    >
+      >
+      {/* <div
+        className={`absolute top-0 left-0 [clip-path:polygon(0_0,55%_0,100%_100%,0%_100%)] hidden sm:flex sm:w-3/4 h-full  -z-10 ${
+          dark ? "bg-[#363636]" : "bg-[#B7DAFF]"
+        } `}
+      ></div> */}
       <Container
         className={`flex flex-col-reverse gap-y-7 sm:flex-row justify-between items-center pt-20 md:pt-32 xl:pt-40 2xl:pt-60 pb-10 md:pb-16 xl:pb-20  2xl:pb-52  overflow-hidden autoShow relative`}
       >
-        <div
-          className={`absolute top-0 left-0 [clip-path:polygon(0_0,55%_0,100%_100%,0%_100%)] hidden sm:flex sm:w-3/4 h-full  -z-10 ${
-            dark ? "bg-[#363636]" : "bg-[#B7DAFF]"
-          } `}
-        ></div>
         <motion.div
           initial="hidden"
           animate="visible"
