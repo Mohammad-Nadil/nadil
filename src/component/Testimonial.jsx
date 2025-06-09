@@ -13,7 +13,7 @@ const testimonials = [
       "Nadil transformed our designs into a responsive and fast web app. Truly professional and timely!",
   },
   {
-    name: "Abdul Majed",
+    name: "Ahmed Ariyan",
     title: "Founder at EdTech Spark",
     message:
       "Excellent attention to detail and great communication. Would love to work again!",
