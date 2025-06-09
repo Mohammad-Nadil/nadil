@@ -39,10 +39,10 @@ const Service = ({}) => {
 
   return (
     <section className="bg_img " id="services">
-      <Container className="py-32 xl:py-40 2xl:py-48 ">
+      <Container className="py-14 md:py-20 xl:py-40 ">
         <div className="flex flex-col gap-14 max-w-[1140px] mx-auto">
           <div className="head ">
-            <h2 className="text-5xl font-bold text-center text-white font-poppins autoShow">
+            <h2 className=" text-4xl md:text-5xl font-bold text-center text-white font-poppins autoShow">
               My Services
             </h2>
           </div>
@@ -51,7 +51,7 @@ const Service = ({}) => {
               {Li.map((item, index) => (
                 <li key={index} className=" autoShow pr-3 sm:w-1/2 flex items-center gap-x-3 md:gap-x-5 lg:gap-x-7">
                   <p
-                    className={`text-4xl lg:text-5xl  transition-all duration-300  ${
+                    className={`text-3xl lg:text-5xl  transition-all duration-300  ${
                       dark ? "text-primary-dark" : " text-primary-light"
                     }`}
                   >

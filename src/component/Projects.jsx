@@ -11,7 +11,7 @@ import uniao from "/uniaoMockup.png";
 import { MdOutlineWeb } from "react-icons/md";
 import { useSelector } from "react-redux";
 
-const Project_card = ({ img, name, project_type, github, vercel , key }) => {
+const Project_card = ({ img, name, project_type, github, vercel, key }) => {
   let [show, setShow] = useState(false);
   let dark = useSelector((state) => state.theme.darkMode);
   return (
@@ -19,7 +19,7 @@ const Project_card = ({ img, name, project_type, github, vercel , key }) => {
       <div
         onClick={() => setShow(!show)}
         className={` hover:shadow-xl 
-        sm:hover:shadow-white transition-all duration-300  rounded-2xl ${
+        sm:hover:shadow-white transition-all duration-300 rounded-lg md:rounded-xl ${
           dark ? "  bg-secondary-dark/60 " : "bg-secondary-light/60 "
         } overflow-hidden  `}
       >
@@ -31,7 +31,7 @@ const Project_card = ({ img, name, project_type, github, vercel , key }) => {
             dark ? "  text-light " : "text-dark "
           }`}
         >
-          <p className="text-4xl font-bold font-poppins">{name}</p>
+          <p className=" text-2xl md:text-4xl font-bold font-poppins">{name}</p>
           <FaAngleDown className="text-3xl" />
         </div>
         <div
@@ -77,7 +77,6 @@ const Project_card = ({ img, name, project_type, github, vercel , key }) => {
     </div>
   );
 };
-
 
 const Projects = () => {
   let [active, setActive] = useState(0);
@@ -128,7 +127,7 @@ const Projects = () => {
   ];
   const settings = {
     // autoplay: true,
-    speed: 500,
+    speed: 300,
     autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false,
@@ -175,7 +174,7 @@ const Projects = () => {
         }}
       >
         <ul
-          className="flex gap-5  absolute top-full translate-y-full left-1/2 -translate-x-1/2 "
+          className="flex gap-3 md:gap-5  absolute top-full translate-y-full left-1/2 -translate-x-1/2 "
           style={{ margin: "0px" }}
         >
           {dots}
@@ -188,7 +187,7 @@ const Projects = () => {
           active == i
             ? ` ${dark ? "bg-primary-dark" : " bg-primary-light"} `
             : "bg-slate-500/50"
-        } w-7  sm:w-12 h-3 rounded-full `}
+        } w-7 h-2 sm:w-12 md:h-3 rounded-full `}
       ></div>
     ),
     beforeChange: (a, b) => {
@@ -197,7 +196,10 @@ const Projects = () => {
   };
   return (
     <section className="bg_img" id="projects">
-      <Container className="py-32 xl:py-40 2xl:py-48">
+      <Container className="py-14 md:py-20 xl:py-40 2xl:py-48 flex flex-col mx-auto gap-y-8 ">
+        <h2
+          className={`text-center font-poppins font-bold text-4xl md:text-5xl  autoBlur text-light`}
+        >My Projects</h2>
         <Slider {...settings}>
           {items.map((item) => (
             <Project_card

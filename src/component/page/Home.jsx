@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import Banner from "../Banner.jsx";
 import Navbar from "../Navbar.jsx";
 import Footer from "../Footer.jsx";
+import Testimonial from "../Testimonial.jsx";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Service />
       <About />
       <Projects />
+      <Testimonial/>
       <Contact />
       <Footer />
     </>

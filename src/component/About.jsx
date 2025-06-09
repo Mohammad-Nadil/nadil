@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaDatabase } from "react-icons/fa";
 import {
   SiJavascript,
   SiTailwindcss,
@@ -8,6 +8,9 @@ import {
   SiFramer,
   SiGreensock,
   SiRedux,
+  SiExpress,
+  SiMongodb,
+  SiNodedotjs,
 } from "react-icons/si";
 import Container from "./layer/Container";
 import { useSelector } from "react-redux";
@@ -23,6 +26,10 @@ const skillIcons = {
   GSAP: <SiGreensock className="text-green-500 " />,
   Framer: <SiFramer className="text-purple-400 " />,
   Redux: <SiRedux className="text-purple-600 " />,
+  NodeJS: <SiNodedotjs  className="text-green-600" />,
+  ExpressJS: <SiExpress className="text-gray-600" />,
+  MongoDB: <SiMongodb className="text-green-500" />,
+  Database: <FaDatabase className="text-blue-700" />,
 };
 
 // Animation Variants
@@ -55,20 +62,20 @@ const About = ({}) => {
             : " bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
         }`}
       >
-        <Container className="py-32 xl:py-40 2xl:py-48">
-          <div className="flex flex-col max-w-[59rem] mx-auto gap-y-8 ">
+        <Container className="py-14 md:py-20 xl:py-40 2xl:py-48">
+          <div className="flex flex-col max-w-[59rem] mx-auto gap-y-5 md:gap-y-8 ">
             <h2
-              className={`text-center font-poppins font-bold text-5xl leading-[75px] autoBlur ${
+              className={`text-center font-poppins font-bold text-4xl md:text-5xl leading-[75px] autoBlur ${
                 dark ? "  text-light " : "text-dark "
               }`}
             >
               ABOUT ME
             </h2>
-            <p className="font-poppins text-center text-2xl md:text-3xl leading-[45px] text-both autoBlur">
+            <p className="font-poppins text-center text-[19px] md:text-3xl leading-[32px] md:leading-[45px] text-both autoBlur">
               I'm <span className={`${color}`}>Mohammad Nadil</span> , I'm{" "}
               <span className={`${color}`}>21</span> years old and I live in{" "}
               <span className={`${color}`}>Dhaka , Bangladesh</span>. <br />
-              <span className={`${color}`}>Front-end developer</span> , I'm
+              <span className={`${color}`}>Full stack Mern developer</span> , I'm
               passionate about interfaces, from their creation to development. I
               like to learn more and more about the area, challenges that take
               me out of my comfort zone are the best. <br />
