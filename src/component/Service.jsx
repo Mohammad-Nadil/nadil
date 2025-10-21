@@ -6,7 +6,7 @@ import { MdDesignServices, MdDevices, MdLockOutline } from "react-icons/md";
 import { RiLayoutMasonryLine } from "react-icons/ri";
 import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from "react-icons/si";
 
-import Container from "./Container";
+import Container from "./layer/Container";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 
@@ -38,7 +38,7 @@ const Service = ({}) => {
             </h2>
           </div>
           <div className="list">
-            <ul className=" w-full grid grid-cols-2 sm:grid-cols-3  gap-y-8 sm:gap-y-10 ">
+            <ul className=" w-full grid grid-cols-2 lg:grid-cols-3  gap-y-8 sm:gap-y-10 ">
               {Li.map((item, index) => (
                 <li
                   key={index}

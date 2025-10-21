@@ -70,11 +70,11 @@ const Project_card = ({
               />
               <p style={{ color: text_color }}>{project_type}</p>
             </div>
-            <div className="flex justify-center text-xs  gap-x-5 w-full">
+            <div className="flex  justify-center text-xs  gap-x-5 w-full">
               <a
                 target="_blank"
                 style={{ color: text_color }}
-                className={`flex items-center justify-center py-2 px-2  transition-all duration-400 cursor-pointer w-1/3 md:w-1/2   xl:gap-x-3 rounded-lg    ${
+                className={`flex items-center justify-center py-2 px-2  transition-all duration-400 cursor-pointer text-nowrap w-1/3 md:w-1/2   xl:gap-x-3 rounded-lg     ${
                   dark
                     ? "border border-primary-dark  hover:bg-primary-dark"
                     : " border border-primary-light  hover:bg-primary-light "
@@ -86,7 +86,7 @@ const Project_card = ({
               </a>
               <a
                 target="_blank"
-                className={`cursor-pointer w-1/3 md:w-1/2  flex items-center py-2  justify-center  rounded-lg transition-all duration-400  ${
+                className={`cursor-pointer text-nowrap w-1/3 md:w-1/2  flex items-center py-2  justify-center  rounded-lg transition-all duration-400  ${
                   dark
                     ? "bg-primary-dark/40 hover:bg-primary-dark text-dark "
                     : " bg-primary-light/40 hover:bg-primary-light text-light "
@@ -186,20 +186,18 @@ const Projects = () => {
       //   },
       // },
       {
-        breakpoint: 1024,
+        breakpoint: 1025,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          centerMode: true,
-          centerPadding: "20px",
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
           centerMode: true,
