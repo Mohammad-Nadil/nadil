@@ -39,8 +39,6 @@ const Banner = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } },
   };
 
-
-
   let items = [
     {
       href: "https://www.facebook.com/profile.php?id=100090793946195",
@@ -63,10 +61,10 @@ const Banner = () => {
           ? " bg-gradient-to-r from-[#363636] to-dark bg-dark"
           : " bg-gradient-to-r from-[#B7DAFF] to-light bg-light"
       }`}
-      >
+    >
       {/* <div
-        className={`absolute top-0 left-0 [clip-path:polygon(0_0,55%_0,100%_100%,0%_100%)] hidden sm:flex sm:w-3/4 h-full  -z-10 ${
-          dark ? "bg-[#363636]" : "bg-[#B7DAFF]"
+        className={`absolute top-0 left-0 [clip-path:polygon(0_0,55%_0,100%_100%,0%_100%)] hidden sm:flex sm:w-8/12 h-full  -z-10 ${
+          dark ? "bg-gradient-to-l from-[#363636] to-dark" : "bg-[#B7DAFF]"
         } `}
       ></div> */}
       <Container
@@ -76,17 +74,17 @@ const Banner = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="flex flex-col left gap-y-3 sm:gap-y-5 md:gap-y-7"
+          className="flex flex-col left gap-y-3 sm:gap-y-5 "
         >
           <motion.h2
-            className={`font-poppins font-extrabold text-5xl lg:text-[2.75rem] lg:leading-[4.125rem]  ${
+            className={`font-poppins font-extrabold text-4xl lg:text-[2.75rem] lg:leading-[4.125rem]  ${
               dark ? "text-primary-dark" : " text-primary-light"
             }`}
           >
             Mohammad Nadil
           </motion.h2>
           <div
-            className={`font-poppins font-bold text-3xl md:text-5xl max-w-[36rem] ${
+            className={`font-poppins font-bold text-2xl md:text-4xl max-w-[36rem] ${
               dark ? "text-light" : "text-dark"
             }`}
           >
@@ -109,8 +107,8 @@ const Banner = () => {
             variants={itemVariants}
             className="font-poppins font-medium md:text-xl text-both max-w-[35rem]  "
           >
-            Front-end developer focused on creating Websites and Web apps. I
-            really like different projects that solve real problems.
+            I'm focused on creating Websites and Web apps. I really like
+            different projects that solve real problems.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -143,7 +141,7 @@ const Banner = () => {
           <motion.div
             drag
             dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }} // Keeps it from moving indefinitely
-            className="image aspect-square w-[70vw] sm:w-[40vw] md:w-[40vw] lg:w-[40vw] xl:w-[35vw] 2xl:w-[25vw] relative z-50"
+            className="image aspect-square w-[70vw] sm:w-[40vw] md:w-[40vw] lg:w-[40vw] xl:max-w-sm 2xl:max-w-md  relative z-50"
           >
             <motion.img
               whileDrag={{ scale: 0.9, rotate: 0 }}

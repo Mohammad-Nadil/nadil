@@ -109,7 +109,9 @@ const Navbar = () => {
             >
               <div
                 className={`absolute top-1/2 -translate-y-1/2 h-full aspect-square rounded-full transition-all duration-300  ${
-                  dark ? "bg-primary-dark right-0" : "bg-gray-400 right-full translate-x-full"
+                  dark
+                    ? "bg-primary-dark right-0"
+                    : "bg-gray-400 right-full translate-x-full"
                 }`}
               />
             </div>
@@ -159,7 +161,9 @@ const Navbar = () => {
             <div onClick={() => setSettingsOpen(!settingsOpen)}>
               <FaGear
                 className={`text-2xl cursor-pointer transition-all duration-300 ${
-                  dark ? "text-light hover:rotate-90" : "text-dark hover:rotate-90"
+                  dark
+                    ? "text-light hover:rotate-90"
+                    : "text-dark hover:rotate-90"
                 }`}
               />
             </div>
@@ -185,7 +189,9 @@ const Navbar = () => {
                     >
                       <div
                         className={`absolute top-1/2 -translate-y-1/2 h-full aspect-square rounded-full transition-all duration-300 ${
-                          dark ? "bg-primary-dark right-0" : "bg-gray-400 right-full translate-x-full"
+                          dark
+                            ? "bg-primary-dark right-0"
+                            : "bg-gray-400 right-full translate-x-full"
                         }`}
                       />
                     </button>

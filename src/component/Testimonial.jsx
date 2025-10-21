@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Container from "./layer/Container";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import "../index.css"
 
 // Sample Testimonials
 const testimonials = [
@@ -101,7 +102,7 @@ const Testimonial = () => {
           <h2 className={`text-4xl md:text-5xl font-bold font-poppins ${textColor}`}>
             Testimonials
           </h2>
-          <p className="mt-2 text-lg text-both font-poppins">
+          <p className="mt-2 text-md md:text-xl text-both font-poppins">
             What clients say about working with me.
           </p>
         </motion.div>
@@ -119,7 +120,7 @@ const Testimonial = () => {
               >
                 <div
                   className={`rounded md:rounded-2xl p-3 md:p-6 border shadow-md hover:shadow-lg transition-shadow duration-300 ${
-                    dark ? "border-gray-700 bg-[#2d2d2d]" : "bg-white border-gray-200"
+                    dark ? "border-gray-700 bg-[#2d2d2d] " : "bg-white border-gray-200"
                   }`}
                 >
                   <div className="h-24 sm:h-32 w-full overflow-hidden mb-2">

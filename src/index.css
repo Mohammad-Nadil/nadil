@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer utilities {
+  .shadow-neum-light {
+    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+  }
+  .shadow-neum-dark {
+    box-shadow: 8px 8px 16px #1a1a1a, -8px -8px 16px #3a3a3a;
+  }
+}

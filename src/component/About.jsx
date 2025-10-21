@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaBootstrap, FaReact, FaDatabase } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaReact,
+  FaDatabase,
+  FaGithub,
+} from "react-icons/fa";
 import {
   SiJavascript,
   SiTailwindcss,
@@ -11,25 +18,34 @@ import {
   SiExpress,
   SiMongodb,
   SiNodedotjs,
+  SiVisualstudiocode,
+  SiFigma,
+  SiPostman,
+  SiDocker,
+  SiGraphql,
 } from "react-icons/si";
 import Container from "./layer/Container";
 import { useSelector } from "react-redux";
 
 const skillIcons = {
-  HTML5: <FaHtml5 className="text-orange-500 " />,
-  CSS3: <FaCss3Alt className="text-blue-500 " />,
-  JavaScript: <SiJavascript className="text-yellow-500 " />,
-  Tailwind: <SiTailwindcss className="text-blue-400 " />,
-  Bootstrap: <FaBootstrap className="text-purple-500 " />,
-  React: <FaReact className="text-blue-400 " />,
-  Next: <SiNextdotjs className="text-gray-500 " />,
-  GSAP: <SiGreensock className="text-green-500 " />,
-  Framer: <SiFramer className="text-purple-400 " />,
-  Redux: <SiRedux className="text-purple-600 " />,
-  NodeJS: <SiNodedotjs  className="text-green-600" />,
+  HTML5: <FaHtml5 className="text-orange-500" />,
+  CSS3: <FaCss3Alt className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-500" />,
+  Tailwind: <SiTailwindcss className="text-blue-400" />,
+  Bootstrap: <FaBootstrap className="text-purple-500" />,
+  React: <FaReact className="text-blue-400" />,
+  Next: <SiNextdotjs className="text-gray-500" />,
+  GSAP: <SiGreensock className="text-green-500" />,
+  Framer: <SiFramer className="text-purple-400" />,
+  Redux: <SiRedux className="text-purple-600" />,
+  NodeJS: <SiNodedotjs className="text-green-600" />,
   ExpressJS: <SiExpress className="text-gray-600" />,
   MongoDB: <SiMongodb className="text-green-500" />,
   Database: <FaDatabase className="text-blue-700" />,
+  GitHub: <FaGithub className="text-gray-500" />,
+  VSCode: <SiVisualstudiocode className="text-blue-700" />,
+  Figma: <SiFigma className="text-pink-500" />,
+  Postman: <SiPostman className="text-orange-400" />,
 };
 
 // Animation Variants

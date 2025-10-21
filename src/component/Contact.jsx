@@ -37,7 +37,7 @@ const Contact = () => {
         <Container className=" autoShow  py-10 sm:px-6 2xl:py-48 xl:py-36 lg:py-28 md:py-20 sm:py-14">
           <div className="main max-w-[89.75rem] mx-auto flex flex-col xl:flex-row justify-center rounded-3xl">
             <div
-              className={`left flex flex-col justify-center items-center p-5 sm:py-8 md:py-12  gap-5 sm:gap-y-7 md:gap-y-9 lg:gap-y-12 xl:gap-y-20 w-full xl:w-2/5 rounded-t-2xl xl:rounded-none xl:rounded-l-3xl border xl:border-none  ${
+              className={`left flex flex-col justify-center items-center  py-5 sm:py-8 md:py-12  gap-5 sm:gap-y-7 md:gap-y-9 lg:gap-y-12 xl:gap-y-20 w-full xl:w-2/5 rounded-t-2xl xl:rounded-none xl:rounded-l-3xl border xl:border-none  ${
                 dark
                   ? "xl:bg-[#303030] border-light"
                   : " border-dark xl:bg-[#DDDADA]"
@@ -54,7 +54,7 @@ const Contact = () => {
                   CONTACT
                 </p>
               </div>
-              <div className="flex flex-col link text-xs  gap-y-6 2xl:gap-y-14 ">
+              <div className="flex flex-col link text-xs md:text-base  gap-y-6 2xl:gap-y-14 ">
                 <a className={links} target="_blank" href="tel:+8801760152349">
                   <IoCallOutline
                     className={` text-4xl !bg-transparent ${
